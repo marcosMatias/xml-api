@@ -33,6 +33,7 @@ src
 Retorna uma **lista de clientes** no formato XML.
 
 📦 **Exemplo de resposta**:
+
 ```xml
 <clientes>
   <cliente>
@@ -57,19 +58,11 @@ Retorna um **cliente único** no formato XML.
 📦 **Exemplo de resposta**:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<clientes>
   <cliente>
     <nome>Joao Pereira</nome>
     <cpf>123.456.789-00</cpf>
     <renda>7500.0</renda>
   </cliente>
-  <cliente>
-    <nome>Ana Souza</nome>
-    <cpf>987.654.321-00</cpf>
-    <renda>6500.0</renda>
-  </cliente>
-</clientes>
 ```
 
 ---
