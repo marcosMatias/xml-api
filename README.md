@@ -1,4 +1,4 @@
-# 📦 API XML - Geração de Clientes em XML
+# 📦 API XML - Geração e Alteração de XML
 
 Esta é uma API REST desenvolvida com **Spring Boot 3.4.3** e **JDK 17** que gera e retorna dados no formato **XML**. Ela simula uma lista de clientes e permite o consumo via endpoints RESTful com suporte à serialização automática em XML.
 
