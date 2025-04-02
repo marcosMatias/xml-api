@@ -19,22 +19,22 @@ Esta é uma API REST desenvolvida com **Spring Boot 3.4.3** e **JDK 17** que ger
 ```bash
 src
 ├── config
-│   └── springdoc               # Configurações do Swagger/OpenAPI
+│   └── springdoc               
 │
-├── controller                  # Camada REST (ex: XmlController,ClienteController)
+├── controller                  
 │
-├── dto                         # Objetos de transferência (XmlRequestDto, XmlResponseDto)
+├── dto                         
 │
 ├── exception
-│   ├── handler                 # Manipuladores de exceções (ControllerExceptionHandler)
-│   └── BusinessException.java  # Exceções customizadas
+│   ├── handler                 
+│   └── BusinessException.java  
 │
-├── service                     # Camada de regras de negócio (XmlService)
+├── service                     
 │
 ├── util
-│   └── function                # Funções utilitárias específicas (ThrowingConsumer, LambdaExceptionUtil)
+│   └── function                
 │
-└── xml                         # Pode representar algo como pacote de domínio ou parser de XML
+└── xml                         
 
  
 
@@ -144,8 +144,16 @@ Acesse a API em: [http://localhost:8080/api/v1/xml](http://localhost:8080/api/v1
 
 Lembre-se de enviar nas requisições o cabeçalho correto:
 
+**Para gerar um xml utilize**
+
 ```http
 Accept: application/xml
+```
+
+**Para alterar um xml utilize**
+
+```http
+Accept: application/json
 ```
 
 ---
