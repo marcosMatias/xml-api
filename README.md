@@ -18,18 +18,36 @@ Esta é uma API REST desenvolvida com **Spring Boot 3.4.3** e **JDK 17** que ger
 
 ```bash
 src
-├── controller        # Camada REST (ex: ClienteController)
-├── dto               # Objetos de transferência (ClienteDto, ClientesDto)
-├── service           # Camada de regra de negócio (ClienteService)
-└── util              # Classe utilitária de dados simulados (ClienteDataFactory)
+├── config
+│   └── springdoc               # Configurações do Swagger/OpenAPI
+│
+├── controller                  # Camada REST (ex: XmlController,ClienteController)
+│
+├── dto                         # Objetos de transferência (XmlRequestDto, XmlResponseDto)
+│
+├── exception
+│   ├── handler                 # Manipuladores de exceções (ControllerExceptionHandler)
+│   └── BusinessException.java  # Exceções customizadas
+│
+├── service                     # Camada de regras de negócio (XmlService)
+│
+├── util
+│   └── function                # Funções utilitárias específicas (ThrowingConsumer, LambdaExceptionUtil)
+│
+└── xml                         # Pode representar algo como pacote de domínio ou parser de XML
+
+ 
+
+
 ```
 
 ---
 
 ## 📡 Endpoints da API
 
-### 🔹 `GET /api/v1/xml/clientes`
+### 🔹 `GET /api/v1/clientes`
 
+📌 **Descrição:** 
 Retorna uma **lista de clientes** no formato XML.
 
 📦 **Exemplo de resposta**:
@@ -49,10 +67,11 @@ Retorna uma **lista de clientes** no formato XML.
 </clientes>
 ```
 
----
 
-### 🔹 `GET /api/v1/xml/cliente`
 
+### 🔹 `GET /api/v1/clientes/{id}`
+
+📌 **Descrição:**
 Retorna um **cliente único** no formato XML.
 
 📦 **Exemplo de resposta**:
@@ -65,6 +84,24 @@ Retorna um **cliente único** no formato XML.
   </cliente>
 ```
 
+
+### 🔹 `POST /api/v1/xml`
+
+Processa os arquivos **XML** localizados no diretório configurado, alterando o valor das tags definidas na classe `XmlService`.
+
+📌 **Descrição:**
+Este endpoint realiza modificações específicas em tags de arquivos XML e move os arquivos processados para o diretório final.
+
+📦 **Exemplo de resposta (JSON):**
+
+```json
+{
+  "statusCode": 200,
+  "data": "17/03/2025 10:25:01",
+  "message": "Arquivos XML processados com sucesso!",
+  "description": "Arquivos XML processados com sucesso!"
+}
+```
 ---
 
 

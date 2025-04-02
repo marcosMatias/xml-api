@@ -18,8 +18,8 @@ public class SpringDocConfigurations {
     @Bean
     OpenAPI openApi() {
 		return new OpenAPI().components(new Components())
-														.info(new Info().title("API XML - Geração de Clientes em XML")
-								                				        .description("Esta é uma API REST desenvolvida com Spring Boot 3.4.3 e JDK 17 que gera e retorna dados no formato XML. "
+														.info(new Info().title("API XML - Gera e Altera um arquivo XML")
+								                				        .description("Esta é uma API REST desenvolvida com Spring Boot 3.4.3 e JDK 17 que gera e altera  um arquivo XML "
 														                             +" Ela simula uma lista de clientes e permite o consumo via endpoints RESTful com suporte à serialização automática em XML.")																
 
 								                				        .version("1.0.1")								                				        								                				        
